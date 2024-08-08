@@ -1,0 +1,19 @@
+<!-- dialog_about.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A biogas plant simulation trainer is an advanced educational tool designed to mimic the operations of a real biogas production facility. It provides users with a virtual environment to learn and practice managing the complex processes involved in converting organic waste into biogas. Through interactive simulations, students can experiment with various parameters, such as waste to water ratio, temperature, and retention time, to optimize biogas production. This technology enhances understanding of anaerobic digestion, promotes sustainable energy solutions, and prepares individuals for real-world applications in renewable energy and waste management sectors."
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:lines="5"
+        android:maxLines="7"
+        android:ellipsize="none" />
+
+
+</LinearLayout>

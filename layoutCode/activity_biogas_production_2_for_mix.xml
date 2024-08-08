@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:layout_marginBottom="15dp"
+    tools:context=".BiogasProduction2forMix">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/black"
+        tools:context=".BiogasProduction2forMix">
+
+        <EditText
+            android:id="@+id/ICVSTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="460dp"
+            android:layout_marginTop="328dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+            android:id="@+id/watertowasteratioINPUT"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="96dp"
+            android:background="@color/white"
+            android:ems="6"
+            android:hint="0.5"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+        <Button
+            android:id="@+id/calculateRetention"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginTop="488dp"
+            android:layout_marginEnd="500dp"
+            android:text="Calculate Retention Time"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/InitialConcentrationTitle"
+            app:layout_constraintHorizontal_bias="0.193"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TFVTitle" />
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="172dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="488dp"
+            android:layout_marginEnd="500dp"
+            android:text="Calculate"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/calculateRetention"
+            app:layout_constraintEnd_toEndOf="@id/InitialConcentrationTitle"
+            app:layout_constraintHorizontal_bias="1.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TFVTitle" />
+
+
+        <EditText
+            android:id="@+id/waterresult"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="184dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="0.0"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <TextView
+            android:id="@+id/Water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Water(in kg):"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.299" />
+
+        <TextView
+            android:id="@+id/TFVLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="text"
+            android:text="Total Feedstock Volume(m³)"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.496" />
+
+        <TextView
+            android:id="@+id/YieldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="text"
+            android:text="Yield Factor (Y):"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.817"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.298" />
+
+        <TextView
+            android:id="@+id/TempTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="text"
+            android:text="Temperature:"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.001"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.633" />
+
+        <TextView
+            android:id="@+id/VSTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="text"
+            android:text="Total Volatile Solids:"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.439" />
+
+        <TextView
+            android:id="@+id/InitialConcentrationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:inputType="text"
+            android:text="Initial Concentration of Volatile Solids (S):"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.995"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.585" />
+
+        <TextView
+            android:id="@+id/biogasproductionresultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:inputType="text"
+            android:text="Total Biogas Production (G):"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.995"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.747" />
+
+        <TextView
+            android:id="@+id/WaterToWasteRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Water to Waste Ratio:"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.145" />
+
+        <TextView
+            android:id="@+id/FinalDIgestertoUseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="text"
+            android:text="Final Digester Volume to Use"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.816"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.144" />
+
+        <TextView
+            android:id="@+id/RetentionTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Retention Time:"
+            android:textColor="@android:color/white"
+            android:textSize="10pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.002"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.815" />
+
+        <TextView
+            android:id="@+id/TextRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="text"
+            android:text="Ratio 1:"
+            android:textColor="@android:color/white"
+            android:textSize="12pt"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintVertical_bias="0.211" />
+
+        <EditText
+            android:id="@+id/DigesterVolumeFInput"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="460dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="0.0"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+            android:id="@+id/RetentionResult"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="460dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+            android:id="@+id/VolatileSolidResult"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="464dp"
+            android:layout_marginTop="244dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+            android:id="@+id/biogasproductionresult"
+            android:layout_width="164dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="464dp"
+            android:layout_marginTop="408dp"
+            android:background="@color/white"
+            android:ems="12"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="result"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+        android:id="@+id/TotalFeedstockVolumeINPUT"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="276dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="0.0"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+            android:id="@+id/YieldINPUT"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="464dp"
+            android:layout_marginTop="180dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+        <EditText
+        android:id="@+id/TempInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="360dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="0.0"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+    <TextView
+        android:id="@+id/biogasheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIOGAS PLANT SIMULATION TRAINER"
+        android:textColor="@android:color/white"
+        android:textSize="5pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/TFVTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="text"
+        android:text="Parameters #2:"
+        android:textColor="@android:color/white"
+        android:textFontWeight="20"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <TextView
+        android:id="@+id/EIGVTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:inputType="text"
+        android:text="Parameters #2:"
+        android:textColor="@android:color/white"
+        android:textFontWeight="20"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="1.5"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.062" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0625" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9375" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0625" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

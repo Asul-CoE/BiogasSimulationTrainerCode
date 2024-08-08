@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".Digester">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    tools:context=".Digester"
+    android:windowSoftInputMode="adjustResize">
+
+    <EditText
+        android:id="@+id/DiVp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="result"
+        android:textColor="@android:color/white"
+        android:textSize="9pt"
+        app:layout_constraintStart_toStartOf="@id/DigesterComputeResult"
+        app:layout_constraintTop_toBottomOf="@id/DVT" />
+
+    <EditText
+        android:id="@+id/DiVg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="result"
+        android:textColor="@android:color/white"
+        android:textSize="9pt"
+        app:layout_constraintStart_toStartOf="@id/DigesterComputeResult"
+        app:layout_constraintTop_toBottomOf="@id/DVPT" />
+
+    <EditText
+        android:id="@+id/DiVd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="result"
+        android:textColor="@android:color/white"
+        android:textSize="9pt"
+        app:layout_constraintStart_toStartOf="@id/DigesterComputeResult"
+        app:layout_constraintTop_toBottomOf="@id/DGSV" />
+
+    <Button
+        android:id="@+id/DigesterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="404dp"
+        android:text="Calculate Digester"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/DigesterDimDiam"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+    <TextView
+        android:id="@+id/DigesterDimH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="text"
+        android:text="Height:"
+        android:textColor="@android:color/white"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.693" />
+
+    <TextView
+        android:id="@+id/DigesterDimDiam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="text"
+        android:text="Diameter:"
+        android:textColor="@android:color/white"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <TextView
+        android:id="@+id/DigesterDim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter Dimensions:"
+        android:textColor="@android:color/white"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <EditText
+        android:id="@+id/DHin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="232dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Height"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+    <EditText
+        android:id="@+id/Diamin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="292dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Diameter"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/biogasheader" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0625" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9375" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0625" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9375" />
+
+    <TextView
+        android:id="@+id/biogasheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIOGAS PLANT SIMULATION TRAINER"
+        android:textColor="@android:color/white"
+        android:textSize="20pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:background="@drawable/spinner_border"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/ChooseDigester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Choose Digester Type:"
+        android:textColor="@android:color/white"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <TextView
+        android:id="@+id/DigesterComputeResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results:"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="551dp"
+        android:layout_marginTop="110dp" />
+
+    <TextView
+        android:id="@+id/DVT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:text="Plant Volume:"
+        android:textColor="@color/white"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/DigesterComputeResult"
+        app:layout_constraintTop_toBottomOf="@id/DigesterComputeResult" />
+
+    <TextView
+        android:id="@+id/DVPT"
+        android:layout_width="226dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="68dp"
+        android:text="Digester Volume:"
+        android:textColor="@color/white"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/DigesterComputeResult"
+        app:layout_constraintTop_toBottomOf="@id/DVT" />
+
+    <TextView
+        android:id="@+id/DGSV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:text="Gas Storage Volume:"
+        android:textColor="@color/white"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/DigesterComputeResult"
+        app:layout_constraintTop_toBottomOf="@id/DVPT" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
